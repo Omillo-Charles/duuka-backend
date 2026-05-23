@@ -49,3 +49,5 @@ Thumbs.db
 # Optional: database dumps
 *.sql
 *.dump
+
+/generated/prisma
