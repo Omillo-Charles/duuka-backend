@@ -1,22 +1,19 @@
+import cookieParser from "cookie-parser";
 import express from "express";
 import { PORT } from "./config/env.js";
-import cookieParser from "cookie-parser";
 
 const app = express();
 
 app.use(express.json());
-app.use(express.urlencoded({
-  extended: true
-}))
-app.use(cookieParser)
+app.use(express.urlencoded({ extended: true }));
+app.use(cookieParser);
 
-app.get("/", (req, res)=>{
-  return res.json({
-    title: "The dotSoko Express.js backend API",
-    body: "Welcome to the dotSoko Express.js backend API"
-  })
+app.get("/", (req, res) => {
+    res.send("Welcome to the dotSoko ExpressJS Backend API");
 })
 
-app.listen(PORT, ()=>{
-  console.log(`The dotSoko backend API is running on http://localhost:${PORT}`)
+app.listen(PORT, () => {
+    console.log(`The dotSoko ExpressJS Backend API is running on http://localhost:${PORT}`)
 })
+
+export default app;
