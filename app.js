@@ -9,11 +9,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 
 app.get("/", (req, res) => {
-    res.send("Welcome to the dotSoko ExpressJS Backend API");
+    res.send("Welcome to the Chavania ExpressJS Backend API");
 })
 
 app.listen(PORT, () => {
-    console.log(`The dotSoko ExpressJS Backend API is running on http://localhost:${PORT}`)
+    console.log(`The Chavania ExpressJS Backend API is running on http://localhost:${PORT}`)
 })
 
 export default app;
